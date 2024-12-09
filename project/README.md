@@ -1,1 +1,3 @@
-This folder is to be used to store the code for your project. 
+#Link to finetuned model
+
+[https://huggingface.co/asheldorwin/merged_model_16b/tree/main]
