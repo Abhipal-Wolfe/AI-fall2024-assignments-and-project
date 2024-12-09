@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  gradio-app-integrated:
+    image: gradio-app-integrated-image # replace with your actual Gradio app image
+    build:
+      context: ./gradio-app-integrated/
+      dockerfile: Dockerfile 
+    ports:
+      - "7860:7860"  # Expose Gradio on port 7860
+    environment:
+      - QDRANT_HOST=qdrant  # The service name of the Qdrant container (used as hostname)
+      - OLLAMA_URL=http://host.docker.internal:11434
+    depends_on:
+      - qdrant  # Ensure Gradio starts after Qdrant
+    networks:
+      - my_network
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports:
+      - "6333:6333"  # Expose Qdrant on port 6333
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge
