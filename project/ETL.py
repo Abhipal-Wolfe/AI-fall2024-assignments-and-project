@@ -44,12 +44,12 @@ def run_pipeline():
     """
     Run the ETL pipeline to search and store GitHub repositories and YouTube videos.
     """
-    GITHUB_TOKEN = "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"
+    GITHUB_TOKEN = "your_token"
     GITHUB_HEADERS = {
         "Authorization": f"token {GITHUB_TOKEN}"
     }
 
-    APIFY_TOKEN = 'apify_api_CsGPQoyKKQOKPXs4cMlItLAaSCi9SR0IUYye'  
+    APIFY_TOKEN = 'your_token'  
     apify_client = ApifyClient(APIFY_TOKEN)
 
     # Queries related to ROS2 and its subdomains
@@ -124,7 +124,7 @@ def run_pipeline():
     querystring = {"query":"ros2"}
 
     headers = {
-        "x-rapidapi-key": "5b8a72a508msh478f467260f3791p15047fjsna143f64d725a",
+        "x-rapidapi-key": "your_key",
         "x-rapidapi-host": "medium2.p.rapidapi.com"
     }
 
@@ -137,7 +137,7 @@ def run_pipeline():
         url = f"https://medium2.p.rapidapi.com/article/{response.json()['articles'][i]}/content"
 
         headers = {
-        "x-rapidapi-key": "5b8a72a508msh478f467260f3791p15047fjsna143f64d725a",
+        "x-rapidapi-key": "your_key",
         "x-rapidapi-host": "medium2.p.rapidapi.com"
         }
 
@@ -169,7 +169,7 @@ def run_pipeline():
         "page": 5
     }
     headers = {
-        "x-rapidapi-key": "5b8a72a508msh478f467260f3791p15047fjsna143f64d725a",
+        "x-rapidapi-key": "your_key",
         "x-rapidapi-host": "fresh-linkedin-profile-data.p.rapidapi.com",
         "Content-Type": "application/json"
     }
