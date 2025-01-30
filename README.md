@@ -1,20 +1,13 @@
-# Introduction
+# Assignment 1
+In this assignment, regularized linear and logistic regression were implemented from scratch using PyTorch’s torch.xyz namespace, avoiding derived libraries. For linear regression, both Stochastic Gradient Descent (SGD) and SGD with momentum were developed, with loss vs. epoch plots comparing their convergence speeds. In logistic regression, the Click-Through Rate (CTR) dataset was preprocessed, and a model was trained using SGD. All gradient calculations and weight updates were explicitly derived and formatted in LaTeX. Hyperparameters were carefully chosen, and performance was analyzed using a precision-recall curve, demonstrating the trade-offs between precision and recall in classification.
 
-## What is this repository?
+# Assignment 2a
+In this assignment, explainer algorithms were implemented to analyze a CNN model trained on the cats vs. dogs classification task. The model, benefiting from data augmentation, achieved high accuracy without overfitting. To interpret its decision-making process, Integrated Gradients and Grad-CAM were implemented using PyTorch and Captum. The notebook included detailed markdown explanations in a tutorial format, ensuring accessibility for those familiar with CNNs. Results from both methods provided visual insights into model predictions, highlighting important regions in the images. The implementation helped in understanding the model’s learned features and decision boundaries.
 
-This is a template docker-based dev environment. It currently supports NVIDIA GPUs but with slight modifications it can target for x86 CPUs and Apple silicon chips. 
+# Assignment 2b
+In this assignment, anomaly detection was performed on the MVTec-AD dataset using PatchCore and EfficientAD models via the anomalib library. Only flat-surface categories (tile, leather, grid) were analyzed. AUROC scores were reported at the product category level and as an overall average. A tutorial-style report explained the methods, results, and concepts like coresets. Additionally, feature extraction was conducted to perform similarity search on anomalous cases using the Qdrant vector database. The system accepted an input image and retrieved the top 5 similar images, ensuring anomalous cases were matched to similar anomalies.
 
-It currently includes the following tools:
+# Assignment 3
+In this assignment, object detection and tracking were performed using YOLO, DeepSORT, OpenCV, and Torch. The notebook installed Torch, TorchVision, OpenCV, and yt-dlp for preprocessing and model execution. A YouTube video was downloaded at the highest resolution using yt-dlp, and frames were processed using OpenCV. YOLO was used for object detection, while DeepSORT handled multi-object tracking. The implementation involved frame-by-frame analysis, real-time tracking, and video annotation. The results were visualized, demonstrating the effectiveness of object detection and tracking algorithms in dynamic environments.
 
-* an empty library called `artagents`  where you can include your code / logic that you want to import across assignments and projects.
-* a `assignments` directory with an empty notebook where you need to populate with your code. The notebook can optionally use the artagents library. 
-* a `project` directory for your project source code. The documentation for the project is stored separately in the `docs` directory. 
-* a `docs` directory that contains the source code of a [quarto](https://quarto.org/) based publishing system with markdown (qmd) and `ipynb` notebooks content. You use the docs folder to publish your project work. 
-* an empty CLI tool that should be based on `typer` and you can optionally use to implement a CLI for your project or assignments. 
-* a `tests` directory that should contains `pytest` based tests  for your `artagents` library and all other code.
-
-## What should I do with it?
-
-* Follow all instructions under [resources in the class website](https://pantelis.github.io/aiml-common/resources/environment/) as you will need it to submit your work. 
-* Familiarize yourself with the `rye` package manager as you will use it it build the library and manage all your dependencies. 
-* Follow the instructions in the course web site under resources to [submit your repo to the course's LLM system](https://pantelis.github.io/aiml-common/resources/environment/assignment-submission.html) (Canvas/Brightspace). 
+# Project
