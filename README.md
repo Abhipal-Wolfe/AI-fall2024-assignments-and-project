@@ -22,6 +22,8 @@ The ClearML orchestrator was used to build an ETL pipeline, extracting structure
 The raw data was processed into vector embeddings and stored in MongoDB and Qdrant, enabling efficient similarity-based retrieval.
 ### Fine-tuning with LoRA:
 Fine-tuning was performed using LoRA (Low-Rank Adaptation), a parameter-efficient adaptation method for large language models. Instead of modifying all model weights, LoRA injected trainable low-rank matrices into transformer layers, significantly reducing computational overhead while maintaining accuracy. This approach enabled fine-tuning on navigation-specific queries without requiring extensive GPU resources.
+### Prompt Engineering:
+Carefully designed prompts were developed to optimize response relevance and coherence. Techniques such as few-shot prompting, chain-of-thought reasoning, and instruction tuning were used to guide the model in generating accurate, structured answers for ROS2-related queries.
 ### Deployment:
 A Gradio app was developed, integrating Ollama for inference and allowing direct retrieval from Hugging Face Hub. Predefined questions like "How can I navigate to a specific pose?" were selectable, generating structured and actionable responses.
 
