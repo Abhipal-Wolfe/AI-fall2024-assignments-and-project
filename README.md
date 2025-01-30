@@ -11,3 +11,18 @@ In this assignment, anomaly detection was performed on the MVTec-AD dataset usin
 In this assignment, object detection and tracking were performed using YOLO, DeepSORT, OpenCV, and Torch. The notebook installed Torch, TorchVision, OpenCV, and yt-dlp for preprocessing and model execution. A YouTube video was downloaded at the highest resolution using yt-dlp, and frames were processed using OpenCV. YOLO was used for object detection, while DeepSORT handled multi-object tracking. The implementation involved frame-by-frame analysis, real-time tracking, and video annotation. The results were visualized, demonstrating the effectiveness of object detection and tracking algorithms in dynamic environments.
 
 # Project
+This project involved developing a Retrieval-Augmented Generation (RAG) system to assist ROS2 robotics developers in building navigation stacks for agents with egomotion. The system focused on answering domain-specific questions across ROS2 middleware, Nav2 navigation, MoveIt2 motion planning, and Gazebo simulation subdomains.
+
+## Project Milestones
+### Environment and Tooling:
+A Docker Compose setup was created, orchestrating services like MongoDB (data storage), Qdrant (vector search), and ClearML (experiment tracking). The system enabled model training and Hugging Face Hub API interactions. Screenshots validated deployment success.
+### ETL Pipeline:
+The ClearML orchestrator was used to build an ETL pipeline, extracting structured data from ROS2 documentation and YouTube transcripts. The pipeline stored raw data in MongoDB, and URLs were logged via queries.
+### Featurization Pipeline:
+The raw data was processed into vector embeddings and stored in MongoDB and Qdrant, enabling efficient similarity-based retrieval.
+### Fine-tuning with LoRA:
+Fine-tuning was performed using LoRA (Low-Rank Adaptation), a parameter-efficient adaptation method for large language models. Instead of modifying all model weights, LoRA injected trainable low-rank matrices into transformer layers, significantly reducing computational overhead while maintaining accuracy. This approach enabled fine-tuning on navigation-specific queries without requiring extensive GPU resources.
+### Deployment:
+A Gradio app was developed, integrating Ollama for inference and allowing direct retrieval from Hugging Face Hub. Predefined questions like "How can I navigate to a specific pose?" were selectable, generating structured and actionable responses.
+
+This project successfully demonstrated RAG’s capability in enhancing domain-specific robotics problem-solving through efficient fine-tuning and retrieval techniques.
